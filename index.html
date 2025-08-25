@@ -4,77 +4,48 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Michael Taffe — Data Journalist</title>
-  <meta name="description" content="Data journalist covering asset and wealth management. Accuracy, independence, transparency." />
 
   <style>
     :root {
-      --bg: #fcfaf7;
-      --ink: #111418;
-      --muted-ink: #47505a;
-      --rule: #dad4cc;
-      --accent: #2b5fb8;
-      --accent-ink: #0f2f6a;
-      --callout: #eef3fb;
-      --nav-bg: rgba(252,250,247,0.9);
-      --shadow: 0 2px 18px rgba(17,20,24,.08);
-      --radius: 14px;
-      --maxw: 860px;
-      --leading: 1.7;
-      --step-0: clamp(16px, 1.2vw, 18px);
-      --step-1: clamp(20px, 2.2vw, 26px);
+      --bg: #fcfaf7; --ink: #111418; --muted-ink: #47505a;
+      --rule: #dad4cc; --accent: #2b5fb8; --accent-ink: #0f2f6a;
+      --callout: #eef3fb; --nav-bg: rgba(252,250,247,0.9);
+      --shadow: 0 2px 18px rgba(17,20,24,.08); --radius: 14px;
+      --maxw: 860px; --leading: 1.7;
+      --step-0: clamp(16px, 1.2vw, 18px); --step-1: clamp(20px, 2.2vw, 26px);
       --step-2: clamp(24px, 3vw, 34px);
-      --step-3: clamp(30px, 4vw, 44px);
     }
     html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font: 400 var(--step-0)/var(--leading) ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 400 var(--step-0)/var(--leading) ui-sans-serif, system-ui, -apple-system;
     }
-    h1, h2, h3 {
-      font-family: ui-serif, Georgia, serif;
-      line-height: 1.2;
-      margin: 0 0 .6em;
-    }
-    h1 { font-size: var(--step-3); }
     h2 { font-size: var(--step-2); border-bottom: 2px solid var(--rule); padding-bottom: .35em; }
-    h3 { font-size: var(--step-1); margin-top: 1.6em; }
     strong { font-weight: 650; }
 
     header {
       position: sticky; top: 0; z-index: 1000;
       backdrop-filter: blur(8px);
-      background: var(--nav-bg);
-      box-shadow: var(--shadow);
+      background: var(--nav-bg); box-shadow: var(--shadow);
     }
     .nav { max-width: var(--maxw); margin: 0 auto; padding: .6rem 1rem;
-      display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
-    .brand { font-weight: 700; font-size: 18px; margin-right: auto; }
+      display: flex; align-items: center; gap: .6rem; }
+    .brand { font-weight: 700; font-size: 18px; margin-right: .8rem; }
     .nav a { color: var(--ink); text-decoration: underline; }
     .nav a:hover { color: var(--accent-ink); }
-    .nav a[aria-current="true"] { color: var(--accent-ink); font-weight: 600; }
 
     main { max-width: var(--maxw); margin: 0 auto; padding: 1rem; }
-    section { padding: 80px 0 40px; }
-
-    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
-    .card { border: 1px solid var(--rule); border-radius: var(--radius);
-      padding: 1rem; box-shadow: var(--shadow); }
-    .card h3 { margin: 0 0 .6em; }
-    .card ul { padding-left: 1.2rem; }
+    section { padding: 60px 0 40px; }
 
     .callout {
-      background: var(--callout);
-      border-left: 4px solid var(--accent);
-      padding: .9rem 1rem;
-      border-radius: 8px;
-      margin: 1rem 0;
+      background: var(--callout); border-left: 4px solid var(--accent);
+      padding: 1rem; border-radius: 8px; margin: 1rem 0;
     }
+
+    ul { padding-left: 1.2rem; }
+    footer { margin-top: 40px; padding: 28px 1rem; border-top: 1px solid var(--rule); text-align: center; color: var(--muted-ink); }
     a { color: var(--accent); }
     a:hover { color: var(--accent-ink); }
-
-    footer { margin-top: 40px; padding: 28px 1rem; border-top: 1px solid var(--rule); text-align: center; color: var(--muted-ink); }
   </style>
 </head>
 <body>
@@ -92,53 +63,49 @@
 <main>
   <!-- ABOUT -->
   <section id="about">
-    <h2>About</h2>
-    <p><strong>I’m a New York-based data journalist</strong> covering the asset and wealth management industries for <em>Financial Times Specialist</em>. I specialize in using <strong>data</strong> to uncover trends, risks, and power dynamics in global finance.</p>
-    <p>I’ve covered the rise of private markets, the growing influence of <strong>BlackRock</strong> and other asset managers, and the shifting regulatory landscape for wealth management. Before FT, I XX, XX, and XX. I studied <strong>statistics at UNC</strong> and am pursuing a <strong>Master’s in machine learning at Georgia Tech</strong>. When I’m not writing or reading the news, I can be found trying to pass as an outdoorsman, or serving as personal staff to my cat, Mabel.</p>
     <div class="callout">
-      I often work on both fast-turnaround news and long-term <strong>data projects</strong>, combining interviews with quantitative analysis. If you’re reaching out with something <strong>time-sensitive</strong>, <strong>flag it in the subject line</strong>. If you have datasets, filings, or public records you think are important, I’d love to see them.
+      <p>I’m a <strong>New York-based data journalist</strong> covering the <strong>asset and wealth management industries</strong> for <em>Financial Times Specialist</em>. I specialize in using data to uncover trends, risks, and power dynamics in global finance.</p>
+      <p>I’ve covered the rise of private markets, the growing influence of BlackRock and other asset managers, and the shifting regulatory landscape for wealth management. Before FT, I XX, XX, and XX. I studied statistics at UNC and am pursuing a Master’s in machine learning at Georgia Tech. When I’m not writing or reading the news, I can be found trying to pass as an outdoorsman, or serving as personal staff to my cat, Mabel.</p>
+      <p>I often work on both fast-turnaround news and long-term data projects, combining interviews with quantitative analysis.<br>
+      If you’re reaching out with something time-sensitive, flag it in the subject line. If you have datasets, filings, or public records you think are important, I’d love to see them.</p>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
     <h2>Some Recent Projects</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>FAIQ</h3>
+    <ul>
+      <li><strong>FundFire</strong>
         <ul>
-          <li><a href="https://www.ft.com"><strong>Who Can Say They're an Advisor?</strong> Proposal Reignites Job Title Debate</a></li>
-          <li><a href="https://www.ft.com">What's Driving the Boom in Structured Product Arbitrations</a></li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>U5 Series</h3>
-        <ul>
-          <li><a href="https://www.ft.com"><strong>Brokers Fired:</strong> Here’s Why Top Firms Give the Boot</a></li>
-          <li><a href="https://www.ft.com"><strong>Brokers Fired:</strong> What to Expect When You’re Expecting a U5 Filing</a></li>
-          <li><a href="https://www.ft.com">Rising Defamation Claims Prompt Industry Call for U5 Changes</a></li>
-          <li><a href="https://www.ft.com"><strong>Wealth Mgmt PACs</strong> Boosted Front-Runners to Lead House Financial Services</a></li>
-          <li><a href="https://www.ft.com">New York’s Role in Securities Industry Continues Shrinking</a></li>
-          <li><a href="https://www.ft.com">Financial Services Industry Spending on Lobbyists Like It's 2009</a></li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>FF</h3>
-        <ul>
-          <li><a href="https://www.ft.com"><strong>BlackRock’s Diplomat-in-Chief:</strong> Inside Larry Fink’s Shadow Foreign Policy</a></li>
+          <li><a href="https://www.ft.com">BlackRock’s Diplomat-in-Chief: Inside Larry Fink’s Shadow Foreign Policy</a></li>
           <li><a href="https://www.ft.com">Alts Managers Face Skepticism from RIAs Over Private Credit ETFs</a></li>
           <li><a href="https://www.ft.com">Asset Managers Spent Millions Targeting Tax, Retirement Policies in Reconciliation Bill</a></li>
           <li><a href="https://www.ft.com">BlackRock Has Infrastructure Ambitions. Global Regulators Have Questions</a></li>
-          <li><a href="https://www.ft.com"><strong>Private Equity</strong> Dominates Wealth M&amp;A as Deal AUM Tops $1T</a></li>
+          <li><a href="https://www.ft.com">Private Equity Dominates Wealth M&amp;A as Deal AUM Tops $1T</a></li>
           <li><a href="https://www.ft.com">Firms Hike Spending on CEOs' Private Jets, Personal Security</a></li>
           <li><a href="https://www.ft.com">The Race to Acquire Private Credit Managers</a></li>
           <li><a href="https://www.ft.com">Searches for BlackRock Skyrocketed After Trump-Shooter Ad Debacle</a></li>
           <li><a href="https://www.ft.com">Managers Go Mum on ESG as Political Pressure Mounts</a></li>
           <li><a href="https://www.ft.com">Firms Dangle Remote-Work Options to Lure Talent</a></li>
         </ul>
-      </article>
-      <article class="card">
-        <h3>More</h3>
+      </li>
+      <li><strong>Financial Advisor IQ</strong>
+        <ul>
+          <li><a href="https://www.ft.com">Who Can Say They're an Advisor? Proposal Reignites Job Title Debate</a></li>
+          <li><a href="https://www.ft.com">What's Driving the Boom in Structured Product Arbitrations</a></li>
+        </ul>
+      </li>
+      <li><strong>U5 Series</strong>
+        <ul>
+          <li><a href="https://www.ft.com">Brokers Fired: Here’s Why Top Firms Give the Boot</a></li>
+          <li><a href="https://www.ft.com">Brokers Fired: What to Expect When You’re Expecting a U5 Filing</a></li>
+          <li><a href="https://www.ft.com">Rising Defamation Claims Prompt Industry Call for U5 Changes</a></li>
+          <li><a href="https://www.ft.com">Wealth Mgmt PACs Boosted Front-Runners to Lead House Financial Services</a></li>
+          <li><a href="https://www.ft.com">New York’s Role in Securities Industry Continues Shrinking</a></li>
+          <li><a href="https://www.ft.com">Financial Services Industry Spending on Lobbyists Like It's 2009</a></li>
+        </ul>
+      </li>
+      <li><strong>More</strong>
         <ul>
           <li><a href="https://www.ft.com">IG: You Had Me at Low Cost: SEC Commissioners' Personal Assets</a></li>
           <li><a href="https://www.ft.com">Agenda: Chilling Effect: See How Asset Managers Are Stripping Disclosures of DEI</a></li>
@@ -147,34 +114,35 @@
           <li><a href="https://www.ft.com">DTH: Author Link</a></li>
           <li><a href="https://www.ft.com">Indy Week: Chapel Hill Retirees Stage Ongoing Black Lives Matter Demonstration</a></li>
         </ul>
-      </article>
-    </div>
+      </li>
+    </ul>
   </section>
 
   <!-- HOW I WORK -->
   <section id="how-i-work">
     <h2>How I Work</h2>
-    <h3>What does on the record/on background/off the record mean?</h3>
-    <p><strong>On the record:</strong> Anything you say can be quoted and attributed to you by name.</p>
-    <p><strong>On background:</strong> I may use the information, but won’t name you directly. Attribution like “a person familiar with…” will be agreed before publication.</p>
-    <p><strong>Off the record:</strong> If agreed beforehand, I commit not to publish or directly use what you tell me.</p>
-    <h3>Can I review the article before it’s published?</h3>
-    <p><strong>No drafts are shared.</strong> I may read back quotes to confirm wording or fact-check technical details.</p>
-    <h3>How do I know you don’t have a hidden agenda?</h3>
+    <p><strong>What does on the record/on background/off the record mean?</strong></p>
+    <p>On the record: Anything you say can be quoted and attributed to you by name.</p>
+    <p>On background: This is used sparingly. I may use the information you provide, but I won’t name you directly. I may describe you as “a person familiar with…” or a similar attribution. How you’re described is something I’d consult you about before publication. </p>
+    <p>Off the record: Once we agree to something being “off the record” before you share it, I commit not to publish or directly use what you tell me. </p>
+    <p><strong>Can I review the article before it’s published?</strong></p>
+    <p>In general, no. I don’t share drafts of stories before publication. That said, I’m always happy to read back quotes to confirm I’ve captured the wording correctly or fact-check key details if something is especially technical.</p>
+    <p><strong>How do I know you don’t have a hidden agenda?</strong></p>
+    <p>My job is to report accurately and fairly — not to move markets or push anyone’s talking points. To that end:</p>
     <ul>
-      <li><strong>I follow the Financial Times’ code of conduct</strong>: independence, conflicts, transparency.</li>
-      <li>I don’t invest in individual securities I cover.</li>
-      <li>I don’t accept gifts, paid travel, or perks from sources.</li>
-      <li>Potential conflicts are disclosed.</li>
+      <li>I follow the Financial Times’ code of conduct, which sets clear rules on independence, conflicts of interest, and transparency.</li>
+      <li>I don’t invest in individual stocks or funds that I cover, so my reporting isn’t shaped by personal financial gain.</li>
+      <li>I don’t accept gifts, paid travel, or perks from sources. If we meet for coffee, I’ll usually insist on picking up the tab.</li>
+      <li>If I ever write about a topic where a potential conflict exists, I’ll disclose it.</li>
     </ul>
-    <h3>How can I contact you discretely?</h3>
-    <p>I take <strong>source protection</strong> seriously. Use Signal or ProtonMail for sensitive conversations.</p>
-    <h3>Something you reported is wrong.</h3>
-    <p><strong>Email me directly</strong>. I’ll review and correct if necessary. Corrections are published transparently.</p>
-    <h3>What is a data reporter, anyway?</h3>
-    <p>I use <strong>data and documents</strong> alongside interviews to tell stories — sometimes analyzing thousands of datapoints, sometimes converting a PDF into searchable data.</p>
-    <h3>I have a comment or feedback</h3>
-    <p>The best way is via <strong>email</strong>. I also hold open office hours weekly. <a href="https://www.ft.com">Office Hours →</a></p>
+    <p><strong>How can I contact you discretely?</strong></p>
+    <p>I take source protection seriously. If you’re considering sharing sensitive information, I can be reached via Signal or ProtonMail for more secure conversation.</p>
+    <p><strong>Something you reported is wrong.</strong></p>
+    <p>Accuracy matters. If you think I got something wrong, please email me directly. I’ll review it promptly and, if necessary, correct the record. Corrections and clarifications are published transparently. If you have additional context that didn’t make it into a story, I welcome it — reporting is an ongoing conversation.</p>
+    <p><strong>What is a data reporter, anyway?</strong></p>
+    <p>It means I use data and documents — from corporate disclosures to government datasets to XX — alongside interviews to tell stories. Sometimes that means analyzing thousands of datapoints in Excel or R; other times it’s as simple as turning a PDF into something searchable. My job is to find the signal in the noise and explain it clearly to inform and promote accountability, and help folks do their jobs better. </p>
+    <p><strong>I have a comment/feedback on something you wrote and want to talk to you about it.</strong></p>
+    <p>The best way to reach me is via email. I also hold open office hours weekly for readers, sources, and anyone curious about my reporting. [Office Hours link here]</p>
   </section>
 
   <!-- CONTACT -->
@@ -183,7 +151,7 @@
     <ul>
       <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
       <li>X (inactive)</li>
-      <li>FT email: <a href="mailto:michael.taffe@ft.com"><strong>michael.taffe@ft.com</strong></a></li>
+      <li>FT email: <a href="mailto:michael.taffe@ft.com">michael.taffe@ft.com</a></li>
       <li>ProtonMail/Signal: <a href="https://www.ft.com">Secure Contact →</a></li>
     </ul>
   </section>
@@ -192,10 +160,7 @@
 <footer>
   © <span id="y"></span> Michael Taffe
 </footer>
-
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
