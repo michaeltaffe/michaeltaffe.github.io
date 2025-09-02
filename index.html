@@ -19,12 +19,12 @@
 
   /* Sticky top bar with headshot */
   header{position:sticky;top:0;z-index:1000;background:var(--nav-bg);backdrop-filter:blur(8px);box-shadow:var(--shadow)}
-  .nav{max-width:var(--maxw);margin:0 auto;padding:.55rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .nav{max-width:var(--maxw);margin:0 auto;padding:0.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.1rem}
   .nav-left{display:flex;align-items:center;gap:.6rem;min-width:0}
-  .brand{font-weight:700;white-space:nowrap}
-  .avatar{width:64px;height:64px;border-radius:999px;object-fit:cover;border:2px solid #fff;box-shadow:var(--shadow)}
-  .links{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap}
-  .links a{color:var(--ink);text-decoration:underline}
+  .brand{font-weight:800;white-space:nowrap;font-size:clamp(20px,2.4vw,26px)}
+  .avatar{width:80px;height:80px;border-radius:999px;object-fit:cover;border:2px solid #fff;box-shadow:var(--shadow)}
+  .links{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
+  .links a{color:var(--ink);text-decoration:underline;font-size:1.0625rem}
   .links a:hover{color:var(--accent-ink)}
 
   /* Robust banner */
@@ -50,7 +50,7 @@
 <header>
   <nav class="nav" aria-label="Primary">
     <div class="nav-left">
-      <img class="avatar" src="headshot.jpg" alt="Headshot of Michael Taffe" />
+      <img class="avatar" id="nav-avatar" src="headshot.jpg" alt="Headshot of Michael Taffe" />
       <div class="brand">Michael Taffe</div>
     </div>
     <div class="links">
@@ -64,11 +64,24 @@
 
 <!-- Banner image (place files in ./img/) -->
 <div class="hero-wrap">
-  <picture>
-    <source srcset="./img/banner.webp" type="image/webp" />
-    <img class="hero" src="banner.jpg" width="2400" height="900" alt="Landscape banner image" loading="eager" />
-  </picture>
+  <img class="hero" id="hero-img" src="banner.jpg" width="2400" height="900" alt="Landscape banner image" loading="eager" />
 </div>
+<script>
+(function(){
+  function addFallback(id, candidates){
+    var el=document.getElementById(id);
+    if(!el) return;
+    var i=0; var list=[el.getAttribute('src')].concat(candidates);
+    el.addEventListener('error', function onErr(){
+      i++;
+      if(i<list.length){ el.src=list[i]; }
+      else { el.removeEventListener('error', onErr); }
+    });
+  }
+  addFallback('hero-img', ['./img/banner.jpg','img/banner.jpg','/banner.jpg','/img/banner.jpg']);
+  addFallback('nav-avatar', ['./img/headshot.jpg','img/headshot.jpg','/headshot.jpg','/img/headshot.jpg']);
+})();
+</script>
 
 <main>
   <!-- ABOUT -->
@@ -107,7 +120,7 @@
     </ul>
 
     <p><strong>How can I contact you discretely?</strong></p>
-    <p>I take source protection seriously. If you’re considering sharing sensitive information, I can be reached via Signal or ProtonMail for more secure conversation.</p>
+    <p>I take source protection seriously. If you’re considering sharing sensitive information, I can be reached via <a href="https://michaeltaffe.github.io/#contact" target="_blank" rel="noopener">Signal or ProtonMail</a> for more secure conversation.</p>
 
     <p><strong>Something you reported is wrong.</strong></p>
     <p>Accuracy matters. If you think I got something wrong, please email me directly. I’ll review it promptly and, if necessary, correct the record. Corrections and clarifications are published transparently. If you have additional context that didn’t make it into a story, I welcome it — reporting is an ongoing conversation.</p>
