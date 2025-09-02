@@ -19,12 +19,12 @@
 
   /* Sticky top bar with headshot */
   header{position:sticky;top:0;z-index:1000;background:var(--nav-bg);backdrop-filter:blur(8px);box-shadow:var(--shadow)}
-  .nav{max-width:var(--maxw);margin:0 auto;padding:0.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.1rem}
+  .nav{max-width:var(--maxw);margin:0 auto;padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.1rem}
   .nav-left{display:flex;align-items:center;gap:.6rem;min-width:0}
-  .brand{font-weight:800;white-space:nowrap;font-size:clamp(20px,2.4vw,26px)}
-  .avatar{width:80px;height:80px;border-radius:999px;object-fit:cover;border:2px solid #fff;box-shadow:var(--shadow)}
+  .brand{font-weight:800;white-space:nowrap;font-size:clamp(22px,2.6vw,28px)}
+  .avatar{width:96px;height:96px;border-radius:999px;object-fit:cover;border:2px solid #fff;box-shadow:var(--shadow)}
   .links{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
-  .links a{color:var(--ink);text-decoration:underline;font-size:1.0625rem}
+  .links a{color:var(--ink);text-decoration:underline;font-size:1.125rem}
   .links a:hover{color:var(--accent-ink)}
 
   /* Robust banner */
@@ -33,7 +33,7 @@
   @media (min-width:900px){ .hero{height:46vh;object-fit:cover;object-position:center} }
 
   main{max-width:var(--maxw);margin:0 auto;padding:1rem}
-  section{padding:60px 0 40px}
+  section{padding:60px 0 40px;scroll-margin-top:120px}
 
   .callout{background:var(--callout);border-left:4px solid var(--accent);padding:1rem;border-radius:8px;margin:.5rem 0 1rem}
 
@@ -55,8 +55,8 @@
     </div>
     <div class="links">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
       <a href="#how-i-work">How I Work</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -78,7 +78,7 @@
       else { el.removeEventListener('error', onErr); }
     });
   }
-  addFallback('hero-img', ['./img/banner.jpg','img/banner.jpg','/banner.jpg','/img/banner.jpg']);
+  addFallback('hero-img', ['banner.webp','./img/banner.webp','img/banner.webp','/banner.webp','/img/banner.webp','banner.jpg','./img/banner.jpg','img/banner.jpg','/banner.jpg','/img/banner.jpg']);
   addFallback('nav-avatar', ['./img/headshot.jpg','img/headshot.jpg','/headshot.jpg','/img/headshot.jpg']);
 })();
 </script>
@@ -87,12 +87,9 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="callout">
-      <p>I’m a New York-based data journalist covering the asset and wealth management industries for Financial Times Specialist. I specialize in using data to uncover trends, risks, and power dynamics in global finance. </p>
-      <p>I’ve covered the rise of investment firms’ influence over infrastructure, the political blowback to ESG investing, trends in disciplinary actions against financial advisors, the risks and opportunities associated with emerging investment products being marketed to everyday investors.</p>
-      <p>I’ve pulled stories out of the information companies and regulators make public themselves, including their spending on private jets and personal security for CEO’s, the flow of lobbying and political campaign spending coming from the industry, and the personal investments of the five SEC commissioners.</p>
-      <p>Before FT, I wrote about higher education for a non-profit newsroom for a non-profit newsroom in North Carolina and campaign finance for a team funded by the N.C. Open Government Coalition. I studied statistics at UNC-Chapel Hill and was the data editor for The Daily Tar Heel. </p>
-      <p>When I’m not writing or reading the news, I can be found trying to pass as an outdoorsman, or serving as personal staff to my cat, Mabel.</p>
-      <p>I often work on both fast-turnaround news and long-term data projects, combining interviews with quantitative analysis. If you’re reaching out with something time-sensitive, flag it in the subject line. If you have datasets, filings, or public records you think are important, I’d love to see them.</p>
+      <p>I’m a New York-based senior data reporter for the Financial Times' specialist publications covering asset and wealth management — the money, the people who move it, and the power that follows. Most days I’m parsing filings, public records and messy datasets, then pressure-testing those findings with on-the-record reporting.</p>
+      <p>I was a 2024 SABEW Goldschmidt fellow and a 2025 Neal Award finalist for a three-part investigation into broker terminations. Before FT, I covered higher education and campaign finance in North Carolina. I studied statistics at UNC-Chapel Hill and once wrangled spreadsheets for my college paper, The Daily Tar Heel, as data editor.</p>
+      <p>More broadly, I care about how businesses, governments and everyday people collide. I aim to close the gap between decisionmakers and the people their decisions affect through reporting that informs and promotes accountability.</p>
     </div>
   </section>
   <!-- HOW I WORK -->
@@ -120,7 +117,7 @@
     </ul>
 
     <p><strong>How can I contact you discretely?</strong></p>
-    <p>I take source protection seriously. If you’re considering sharing sensitive information, I can be reached via <a href="https://michaeltaffe.github.io/#contact" target="_blank" rel="noopener">Signal or ProtonMail</a> for more secure conversation.</p>
+    <p>I take source protection seriously. If you’re considering sharing sensitive information, I can be reached via <a href="#contact">Signal or ProtonMail</a> for more secure conversation.</p>
 
     <p><strong>Something you reported is wrong.</strong></p>
     <p>Accuracy matters. If you think I got something wrong, please email me directly. I’ll review it promptly and, if necessary, correct the record. Corrections and clarifications are published transparently. If you have additional context that didn’t make it into a story, I welcome it — reporting is an ongoing conversation.</p>
