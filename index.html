@@ -1,57 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Michael Taffe — Data Journalist</title>
-<meta name="description" content="Portfolio and contact for Michael Taffe, data journalist covering asset and wealth management." />
-<style>
-  :root{
-    --bg:#fcfaf7;--ink:#111418;--muted:#47505a;--rule:#dad4cc;
-    --accent:#2b5fb8;--accent-ink:#0f2f6a;--callout:#eef3fb;
-    --nav-bg:rgba(252,250,247,.92);--shadow:0 2px 18px rgba(17,20,24,.08);
-    --maxw:860px;--radius:14px;--leading:1.7;
-    --step-0:clamp(16px,1.2vw,18px);--step-1:clamp(20px,2.2vw,26px);--step-2:clamp(24px,3vw,34px);
-  }
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--step-0)/var(--leading) ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-  h2{font-size:var(--step-2);border-bottom:2px solid var(--rule);padding-bottom:.35em;margin-top:0}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael Taffe — Data Journalist</title>
+  <meta name="description" content="Portfolio and contact for Michael Taffe, data journalist covering asset and wealth management." />
 
-  /* Sticky top bar with headshot */
-  header{position:sticky;top:0;z-index:1000;background:var(--nav-bg);backdrop-filter:blur(8px);box-shadow:var(--shadow)}
-  .nav{max-width:var(--maxw);margin:0 auto;padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.1rem}
-  .nav-left{display:flex;align-items:center;gap:.6rem;min-width:0}
-  .brand{font-weight:800;white-space:nowrap;font-size:clamp(22px,2.6vw,28px)}
-  .avatar{width:96px;height:96px;border-radius:999px;object-fit:cover;border:2px solid #fff;box-shadow:var(--shadow)}
-  .links{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
-  .links a{color:var(--ink);text-decoration:underline;font-size:1.125rem}
-  .links a:hover{color:var(--accent-ink)}
+  <!-- SEO / Social -->
+  <link rel="canonical" href="https://michaeltaffe.com/" />
+  <meta property="og:title" content="Michael Taffe — Data Journalist" />
+  <meta property="og:description" content="Portfolio and contact for Michael Taffe, data journalist covering asset and wealth management." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://michaeltaffe.com/" />
+  <meta property="og:image" content="/img/banner.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  /* Robust banner */
-  .hero-wrap{width:100%;max-height:420px;overflow:hidden;background:#e9eef7}
-  .hero{display:block;width:100%;height:auto;aspect-ratio:2400/900}
-  @media (min-width:900px){ .hero{height:46vh;object-fit:cover;object-position:center} }
+  <link rel="icon" href="/favicon.ico" />
 
-  main{max-width:var(--maxw);margin:0 auto;padding:1rem}
-  section{padding:60px 0 40px;scroll-margin-top:120px}
+  <style>
+    :root{
+      --bg:#fcfaf7;--ink:#111418;--muted:#47505a;--rule:#dad4cc;
+      --accent:#2b5fb8;--accent-ink:#0f2f6a;--callout:#eef3fb;
+      --nav-bg:rgba(252,250,247,.92);--shadow:0 2px 18px rgba(17,20,24,.08);
+      --maxw:860px;--radius:14px;--leading:1.7;
+      --step-0:clamp(16px,1.2vw,18px);--step-1:clamp(20px,2.2vw,26px);--step-2:clamp(24px,3vw,34px);
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--step-0)/var(--leading) ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    h2{font-size:var(--step-2);border-bottom:2px solid var(--rule);padding-bottom:.35em;margin-top:0}
 
-  .callout{background:var(--callout);border-left:4px solid var(--accent);padding:1rem;border-radius:8px;margin:.5rem 0 1rem}
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;padding:.5rem .75rem;background:#fff;color:#000;border-radius:8px;box-shadow:var(--shadow);z-index:2000}
 
-  a{color:var(--accent)} a:hover{color:var(--accent-ink)}
-  ul{padding-left:1.2rem}
+    header{position:sticky;top:0;z-index:1000;background:var(--nav-bg);backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+    .nav{max-width:var(--maxw);margin:0 auto;padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.1rem}
+    .nav-left{display:flex;align-items:center;gap:.6rem;min-width:0}
+    .brand{font-weight:800;white-space:nowrap;font-size:clamp(22px,2.6vw,28px)}
+    .avatar{width:96px;height:96px;border-radius:999px;object-fit:cover;border:2px solid #fff;box-shadow:var(--shadow)}
+    .links{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
+    .links a{color:var(--ink);text-decoration:underline;font-size:1.125rem}
+    .links a[aria-current="page"], .links a:hover{color:var(--accent-ink)}
 
-  /* Story deks */
-  .dek{margin:.25rem 0 .6rem;color:var(--muted);font-style:italic}
-  li>ul{margin-top:.4rem}
-</style>
+    .hero-wrap{width:100%;max-height:420px;overflow:hidden;background:#e9eef7}
+    .hero{display:block;width:100%;height:auto;aspect-ratio:2400/900}
+    @media (min-width:900px){ .hero{height:46vh;object-fit:cover;object-position:center} }
+
+    main{max-width:var(--maxw);margin:0 auto;padding:1rem}
+    section{padding:60px 0 40px;scroll-margin-top:120px}
+
+    .callout{background:var(--callout);border-left:4px solid var(--accent);padding:1rem;border-radius:8px;margin:.5rem 0 1rem}
+
+    a{color:var(--accent)} a:hover{color:var(--accent-ink)}
+    ul{padding-left:1.2rem}
+
+    .dek{margin:.25rem 0 .6rem;color:var(--muted);font-style:italic}
+    li>ul{margin-top:.4rem}
+
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header role="banner">
   <nav class="nav" aria-label="Primary">
     <div class="nav-left">
-      <img class="avatar" id="nav-avatar" src="headshot.jpg" alt="Headshot of Michael Taffe" />
-      <div class="brand">Michael Taffe</div>
+      <img class="avatar" id="nav-avatar" src="headshot.jpg" width="96" height="96" alt="Headshot of Michael Taffe" loading="lazy" />
+      <div class="brand" aria-hidden="true">Michael Taffe</div>
+      <h1 class="sr-only">Michael Taffe — Data Journalist</h1>
     </div>
     <div class="links">
       <a href="#about">About</a>
@@ -62,112 +79,104 @@
   </nav>
 </header>
 
-<!-- Banner image (place files in ./img/) -->
 <div class="hero-wrap">
   <img class="hero" id="hero-img" src="banner.jpg" width="2400" height="900" alt="Landscape banner image" loading="eager" />
 </div>
-<script>
-(function(){
-  function addFallback(id, candidates){
-    var el=document.getElementById(id);
-    if(!el) return;
-    var i=0; var list=[el.getAttribute('src')].concat(candidates);
-    el.addEventListener('error', function onErr(){
-      i++;
-      if(i<list.length){ el.src=list[i]; }
-      else { el.removeEventListener('error', onErr); }
-    });
-  }
-  addFallback('hero-img', ['banner.webp','./img/banner.webp','img/banner.webp','/banner.webp','/img/banner.webp','banner.jpg','./img/banner.jpg','img/banner.jpg','/banner.jpg','/img/banner.jpg']);
-  addFallback('nav-avatar', ['./img/headshot.jpg','img/headshot.jpg','/headshot.jpg','/img/headshot.jpg']);
-})();
-</script>
 
-<main>
+<main id="main" role="main">
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
     <div class="callout">
-      <p>I’m a New York-based senior data reporter for the Financial Times' specialist publications covering asset and wealth management — the money, the people who move it, and the power that follows. Most days I’m parsing filings, public records and messy datasets, then pressure-testing those findings with on-the-record reporting.</p>
-      <p>I was a 2024 SABEW Goldschmidt fellow and a 2025 Neal Award finalist for a three-part investigation into broker terminations. Before FT, I covered higher education and campaign finance in North Carolina. I studied statistics at UNC-Chapel Hill and once wrangled spreadsheets for my college paper, The Daily Tar Heel, as data editor.</p>
-      <p>More broadly, I care about how businesses, governments and everyday people collide. I aim to close the gap between decisionmakers and the people their decisions affect through reporting that informs and promotes accountability.</p>
+      <p>I’m a New York–based senior data reporter for the Financial Times' specialist publications covering asset and wealth management — the money, the people who move it, and the influence that follows. Most days I’m parsing filings, public records and messy datasets, then pressure-testing those findings with on-the-record reporting.</p>
+      <p>Before FT, I covered higher education and campaign finance in North Carolina. I studied statistics at UNC–Chapel Hill and once wrangled spreadsheets for my college paper, The Daily Tar Heel, as data editor.</p>
+      <p>Topics I’ve reported on include the <a href="https://www.fundfire.com/c/4951664/683374" target="_blank" rel="noopener noreferrer">rise of investment firms’ influence over infrastructure</a>, the <a href="https://www.fundfire.com/c/4014504/519624" target="_blank" rel="noopener noreferrer">political blowback to ESG investing</a>, <a href="https://www.financialadvisoriq.com/c/4366334/562454" target="_blank" rel="noopener noreferrer">trends in disciplinary actions against financial advisors</a>, the <a href="https://www.fundfire.com/c/4948874/682534" target="_blank" rel="noopener noreferrer">risks and opportunities associated with emerging investment products</a>, <a href="https://www.fundfire.com/c/4717304/630154" target="_blank" rel="noopener noreferrer">spending on private jets and personal security for CEOs</a>, the <a href="https://www.financialadvisoriq.com/c/4518654/588364" target="_blank" rel="noopener noreferrer">flow of lobbying and political campaign spending</a>, and the <a href="https://www.ignites.com/c/3969654/512234" target="_blank" rel="noopener noreferrer">personal investments of the five SEC commissioners</a>.</p>
+      <p>More broadly, I care about how businesses, governments and everyday people collide. I aim to close the gap between decision‑makers and the people their decisions affect through reporting that informs and promotes accountability.</p>
     </div>
   </section>
+
   <!-- HOW I WORK -->
-  <section id="how-i-work"><!-- HOW I WORK -->
-  <section id="how-i-work">
-    <h2>How I Work</h2>
+  <section id="how-i-work" aria-labelledby="how-h">
+    <h2 id="how-h">How I Work</h2>
 
     <p><strong>What does on the record/on background/off the record mean?</strong></p>
     <ul>
       <li><em>On the record:</em> Anything you say can be quoted and attributed to you by name.</li>
-      <li><em>On background:</em> This is used sparingly. I may use the information you provide, but I won’t name you directly. I may describe you as “a person familiar with…” or a similar attribution. How you’re described is something I’d consult you about before publication. </li>
-      <li><em>Off the record:</em> Once we agree to something being “off the record” before you share it, I commit not to publish or directly use what you tell me. </li>
+      <li><em>On background:</em> This is used sparingly. I may use the information you provide, but I won’t name you directly. I may describe you as “a person familiar with…” or a similar attribution. How you’re described is something I’d consult you about before publication.</li>
+      <li><em>Off the record:</em> Once we agree to something being “off the record” <em>before</em> you share it, I commit not to publish or directly use what you tell me.</li>
     </ul>
 
     <p><strong>Can I review the article before it’s published?</strong></p>
-    <p>In general, no. I don’t share drafts of stories before publication. That said, I’m always happy to read back quotes to confirm I’ve captured the wording correctly or fact-check key details if something is especially technical.</p>
+    <p>In general, no. I don’t share drafts of stories before publication. That said, I’m always happy to read back quotes to confirm I’ve captured the wording correctly or fact‑check key details if something is especially technical.</p>
 
     <p><strong>How do I know you don’t have a hidden agenda?</strong></p>
     <p>My job is to report accurately and fairly — not to move markets or push anyone’s talking points. To that end:</p>
     <ul>
-      <li>I follow the <a href="https://aboutus.ft.com/company/our-standards/editorial-code" target="_blank" rel="noopener">Financial Times’ editorial code of conduct</a>, which sets clear rules on independence, conflicts of interest, and transparency.</li>
+      <li>I follow the <a href="https://aboutus.ft.com/company/our-standards/editorial-code" target="_blank" rel="noopener noreferrer">Financial Times’ editorial code of conduct</a>, which sets clear rules on independence, conflicts of interest, and transparency.</li>
       <li>I don’t invest in individual stocks or funds that I cover, so my reporting isn’t shaped by personal financial gain.</li>
       <li>I don’t accept gifts, paid travel, or perks from sources. If we meet for coffee, I’ll usually insist on picking up the tab.</li>
       <li>If I ever write about a topic where a potential conflict exists, I’ll disclose it.</li>
     </ul>
 
-    <p><strong>How can I contact you discretely?</strong></p>
+    <p><strong>How can I contact you discreetly?</strong></p>
     <p>I take source protection seriously. If you’re considering sharing sensitive information, I can be reached via <a href="#contact">Signal or ProtonMail</a> for more secure conversation.</p>
 
     <p><strong>Something you reported is wrong.</strong></p>
-    <p>Accuracy matters. If you think I got something wrong, please email me directly. I’ll review it promptly and, if necessary, correct the record. Corrections and clarifications are published transparently. If you have additional context that didn’t make it into a story, I welcome it — reporting is an ongoing conversation.</p>
+    <p>If you think I got something wrong, please email me directly. I’ll review it promptly and, if necessary, correct the record. Corrections and clarifications are published transparently. If you have additional context that didn’t make it into a story, I welcome it — reporting is an ongoing conversation.</p>
 
     <p><strong>What is a data reporter, anyway?</strong></p>
-    <p>It means I use data and documents — from corporate disclosures to government datasets to public records — alongside interviews to tell stories. Sometimes that means analyzing thousands of datapoints in Excel or R; other times it’s as simple as turning a PDF into something searchable. My job is to find the signal in the noise and explain it clearly to inform and promote accountability, and help folks do their jobs better. </p>
+    <p>It means I use data and documents — from corporate disclosures to government datasets to public records — alongside interviews to tell stories. Sometimes that means analyzing thousands of datapoints in Excel or R; other times it’s as simple as turning a PDF into something searchable. My job is to find the signal in the noise and explain it clearly to inform and promote accountability, and help folks do their jobs better.</p>
 
-    <p><strong>I have a comment/feedback on something you wrote and want to talk to you about it. </strong></p>
-    <p>The best way to reach me is via email. I also hold <a href="https://calendly.com/michael-taffe-ft/20min" target="_blank" rel="noopener">open office hours</a> weekly for readers, sources, and anyone curious about my reporting.</p>
-  </section>
-
+    <p><strong>I have a comment or feedback on something you wrote and want to talk to you about it.</strong></p>
+    <p>The best way to reach me is via email. I also hold <a href="https://calendly.com/michael-taffe-ft/20min" target="_blank" rel="noopener noreferrer">open office hours</a> weekly for readers, sources, and anyone curious about my reporting.</p>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Some Recent Projects</h2>
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">Some Recent Projects</h2>
     <ul>
       <!-- FundFire (FF) -->
       <li><strong>FF</strong>
         <ul>
           <li>
-            <a href="https://www.ft.com">BlackRock’s Diplomat-in-Chief: Inside Larry Fink’s Shadow Foreign Policy</a>
+            <a href="https://www.fundfire.com/c/4951664/683374" target="_blank" rel="noopener noreferrer">BlackRock’s Diplomat-in-Chief: Inside Larry Fink’s Shadow Foreign Policy</a>
             <p class="dek">A count of how frequently one of the most influential business leaders meets with presidents, prime ministers, and kings, and what it means for economic sovereignty.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Alts Managers Face Skepticism from RIAs Over Private Credit ETFs</a>
-            <p class="dek">A look at how the folks who sell securities are reacting to the folks who make securities attempting something new: making an illiquid asset for institutional investors liquid and for retail investors.</p>
+            <a href="https://www.fundfire.com/c/4948874/682534" target="_blank" rel="noopener noreferrer">Alts Managers Face Skepticism from RIAs Over Private Credit ETFs</a>
+            <p class="dek">How the folks who sell securities are reacting to the folks who make securities attempting something new: making an illiquid asset for institutional investors liquid and for retail investors.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Asset Managers Spent Millions Targeting Tax, Retirement Policies in Reconciliation Bill</a>
-            <p class="dek">A deep dive into the lobbying strategy of the major industry groups around the 2025 reconciliation bill.</p>
+            <a href="https://www.fundfire.com/c/4928084/674694" target="_blank" rel="noopener noreferrer">Asset Managers Spent Millions Targeting Tax, Retirement Policies in Reconciliation Bill</a>
+            <p class="dek">A deep dive into the lobbying strategy of major industry groups around the 2025 reconciliation bill.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">BlackRock Has Infrastructure Ambitions. Global Regulators Have Questions</a>
-            <p class="dek">A deep dive into the lobbying strategy of the major industry groups around the 2025 reconciliation bill.</p>
+            <a href="https://www.fundfire.com/c/4831964/655724" target="_blank" rel="noopener noreferrer">BlackRock Has Infrastructure Ambitions. Global Regulators Have Questions</a>
+            <p class="dek">Scrutinizing regulatory responses as the world’s largest asset manager expands into infrastructure.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Firms Hike Spending on CEOs' Private Jets, Personal Security</a>
-            <p class="dek">A comparison of how much the largest asset managers spend on private flights and security for their chief executives, and an update on their compensation.</p>
+            <a href="https://www.fundfire.com/c/4807864/652514" target="_blank" rel="noopener noreferrer">Private Equity Dominates Wealth M&A as Deal AUM Tops $1T</a>
+            <p class="dek">Tracking the surge of private‑equity backed acquisitions across wealth management.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Searches for BlackRock Skyrocketed After Trump-Shooter Ad Debacle</a>
+            <a href="https://www.fundfire.com/c/4717304/630154" target="_blank" rel="noopener noreferrer">Firms Hike Spending on CEOs' Private Jets, Personal Security</a>
+            <p class="dek">Comparing how much the largest asset managers spend on private flights and security for their chief executives, and updating their compensation.</p>
+          </li>
+          <li>
+            <a href="https://www.fundfire.com/c/4595764/608054" target="_blank" rel="noopener noreferrer">Searches for BlackRock Skyrocketed After Trump-Shooter Ad Debacle</a>
             <p class="dek">A visualization of how often people Googled the world’s largest asset manager and the PR response after it was tied up in the news cycle of Trump’s assassination attempt.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Managers Go Mum on ESG as Political Pressure Mounts</a>
-            <p class="dek">A text analysis putting dates behind when conversation around environmental, social, and governance investing peaked, and when it went quiet.</p>
+            <a href="https://www.fundfire.com/c/4356164/564814" target="_blank" rel="noopener noreferrer">Managers Go Mum on ESG as Political Pressure Mounts</a>
+            <p class="dek">Text analysis putting dates behind when conversation around ESG investing peaked — and when it went quiet.</p>
+          </li>
+          <li>
+            <a href="https://www.fundfire.com/c/4356094/564814" target="_blank" rel="noopener noreferrer">Firms Dangle Remote-Work Options to Lure Talent</a>
+            <p class="dek">How flexibility became a recruiting tool across asset management.</p>
+          </li>
+          <li>
+            <a href="https://www.fundfire.com/c/4798164/649164" target="_blank" rel="noopener noreferrer">Chilling Effect: See How Asset Managers Are Stripping Disclosures of DEI</a>
+            <p class="dek">A text analysis showing the decline of DEI language among publicly traded asset managers.</p>
           </li>
         </ul>
       </li>
@@ -176,33 +185,33 @@
       <li><strong>Financial Advisor IQ</strong>
         <ul>
           <li>
-            <a href="https://www.ft.com">Who Can Say They're an Advisor? Proposal Reignites Job Title Debate</a>
+            <a href="https://www.financialadvisoriq.com/c/4794834/638654" target="_blank" rel="noopener noreferrer">Who Can Say They're an Advisor? Proposal Reignites Job Title Debate</a>
             <p class="dek">A peek under the hood of how industry groups collaborate on their strategy to influence regulations.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">What's Driving the Boom in Structured Product Arbitrations</a>
+            <a href="https://www.financialadvisoriq.com/c/4721614/631764" target="_blank" rel="noopener noreferrer">What's Driving the Boom in Structured Product Arbitrations</a>
             <p class="dek">A story on a complex financial product and the growth in the number of investors suing the advisors who sold them.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Wealth Mgmt PACs Boosted Front-Runners to Lead House Financial Services</a>
+            <a href="https://www.financialadvisoriq.com/c/4702834/628164" target="_blank" rel="noopener noreferrer">Wealth Mgmt PACs Boosted Front-Runners to Lead House Financial Services</a>
             <p class="dek">An overview of the candidates who were running to lead an influential congressional committee and their ties to the industry it oversees.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">New York’s Role in Securities Industry Continues Shrinking</a>
-            <p class="dek">An update pulling from new data showing the continuation of the financial industry’s spread outward from the nation’s financial center.</p>
+            <a href="https://www.financialadvisoriq.com/c/4686344/622614" target="_blank" rel="noopener noreferrer">New York’s Role in Securities Industry Continues Shrinking</a>
+            <p class="dek">New data showing the continuation of the financial industry’s spread outward from the nation’s financial center.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Financial Services Industry Spending on Lobbyists Like It's 2009</a>
-            <p class="dek">A look at how much the wealth management industry spends on lobbyists, and why.</p>
+            <a href="https://www.financialadvisoriq.com/c/4518654/588364" target="_blank" rel="noopener noreferrer">Financial Services Industry Spending on Lobbyists Like It's 2009</a>
+            <p class="dek">How much the wealth management industry spends on lobbyists — and why.</p>
           </li>
 
           <!-- U5 Series -->
           <li><strong>U5 Series</strong>
-            <p class="dek">A three part series resulting from public records requests filed across all fifty states seeking quasi-public filings showing why securities brokers are terminated from their firms; Finalist for a 2025 Neal Award.</p>
+            <p class="dek">A three‑part series from public records requests filed across all fifty states seeking quasi‑public filings showing why securities brokers are terminated from their firms; Finalist for a 2025 Neal Award.</p>
             <ul>
-              <li><a href="https://www.ft.com">Brokers Fired: Here’s Why Top Firms Give the Boot</a></li>
-              <li><a href="https://www.ft.com">Brokers Fired: What to Expect When You’re Expecting a U5 Filing</a></li>
-              <li><a href="https://www.ft.com">Rising Defamation Claims Prompt Industry Call for U5 Changes</a></li>
+              <li><a href="https://www.financialadvisoriq.com/c/4366334/562454" target="_blank" rel="noopener noreferrer">Brokers Fired: Here’s Why Top Firms Give the Boot</a></li>
+              <li><a href="https://www.financialadvisoriq.com/c/4284654/550954" target="_blank" rel="noopener noreferrer">Brokers Fired: What to Expect When You’re Expecting a U5 Filing</a></li>
+              <li><a href="https://www.financialadvisoriq.com/c/4718864/631734" target="_blank" rel="noopener noreferrer">Rising Defamation Claims Prompt Industry Call for U5 Changes</a></li>
             </ul>
           </li>
         </ul>
@@ -212,41 +221,36 @@
       <li><strong>More</strong>
         <ul>
           <li>
-            <a href="https://www.ft.com">Ignites: You Had Me at Low Cost: SEC Commissioners' Personal Assets</a>
+            <a href="https://www.ignites.com/c/3969654/512234" target="_blank" rel="noopener noreferrer">You Had Me at Low Cost: SEC Commissioners' Personal Assets</a>
             <p class="dek">A visual depiction of the personal investments disclosed by the five people who regulate the investment industry on their ethics forms.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Agenda: Chilling Effect: See How Asset Managers Are Stripping Disclosures of DEI</a>
-            <p class="dek">A text analysis showing the decline of diversity, equity, and inclusion initiatives among publicly-traded asset managers.</p>
+            <a href="https://www.wfae.org/politics/2021-01-15/revealing-money-and-power-networks-in-north-carolina-campaigns?utm_content=buffer6c3e7&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer" target="_blank" rel="noopener noreferrer">Revealing Money and Power Networks in North Carolina Campaigns</a>
+            <p class="dek">Mapping North Carolina’s campaign finance network in the 2020 General Assembly election, funded by a sunshine non‑profit.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">North Carolina Open Government Coalition: Revealing Money and Power Networks in North Carolina Campaigns</a>
-            <p class="dek">A mapping of North Carolina’s campaign finance network in the 2020 General Assembly election, funded by a sunshine non-profit.</p>
+            <a href="https://www.ednc.org/author/michael-taffe/" target="_blank" rel="noopener noreferrer">EducationNC: Author Link</a>
+            <p class="dek">Author page from my time covering education policy and the community college system for a non‑profit newsroom.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">EducationNC: Author Link</a>
-            <p class="dek">Author page from my time covering education policy and the community college system for a non-profit newsroom.</p>
-          </li>
-          <li>
-            <a href="https://www.ft.com">The Daily Tar Heel: Author Link</a>
+            <a href="https://www.dailytarheel.com/staff/michael_taffe" target="_blank" rel="noopener noreferrer">The Daily Tar Heel: Author Link</a>
             <p class="dek">Author page from my time as data editor at my college paper.</p>
           </li>
           <li>
-            <a href="https://www.ft.com">Indy Week: Chapel Hill Retirees Stage Ongoing Black Lives Matter Demonstration</a>
-            <p class="dek">A group of locals in a majority white community engaged in a months-long demonstration on the side of a highway supporting the BLM movement. I brought a camping chair and asked them about it.</p>
+            <a href="https://indyweek.com/news/orange/chapel-hill-retirees-black-lives-matter/" target="_blank" rel="noopener noreferrer">Chapel Hill Retirees Stage Ongoing Black Lives Matter Demonstration</a>
+            <p class="dek">A group of locals in a majority‑white community engaged in a months‑long demonstration supporting the BLM movement. I brought a camping chair and asked them about it.</p>
           </li>
         </ul>
       </li>
     </ul>
   </section>
 
-  </section>
-<!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
     <ul>
-      <li><a href="https://www.linkedin.com/in/michael-taffe" target="_blank" rel="noopener">LinkedIn: in/michael-taffe</a></li>
-      <li><a href="https://twitter.com/MichaelJTaffe" target="_blank" rel="noopener">X (inactive): @MichaelJTaffe</a></li>
+      <li><a href="https://www.linkedin.com/in/michael-taffe" target="_blank" rel="noopener noreferrer">LinkedIn: in/michael-taffe</a></li>
+      <li><a href="https://twitter.com/MichaelJTaffe" target="_blank" rel="noopener noreferrer">X (inactive): @MichaelJTaffe</a></li>
       <li>FT email: <a href="mailto:michael.taffe@ft.com">michael.taffe@ft.com</a></li>
       <li>ProtonMail: <a href="mailto:michaeltaffe@proton.me">michaeltaffe@proton.me</a></li>
       <li>Signal: michaeltaffe.33</li>
@@ -256,6 +260,37 @@
 
 <script>
   document.title = "Michael Taffe — Data Journalist";
+
+  (function(){
+    function addFallback(id, candidates){
+      var el=document.getElementById(id);
+      if(!el) return;
+      var i=0; var list=[el.getAttribute('src')].concat(candidates);
+      el.addEventListener('error', function onErr(){
+        i++;
+        if(i<list.length){ el.src=list[i]; }
+        else { el.removeEventListener('error', onErr); }
+      });
+    }
+    addFallback('hero-img', ['banner.webp','./img/banner.webp','img/banner.webp','/banner.webp','/img/banner.webp','banner.jpg','./img/banner.jpg','img/banner.jpg','/banner.jpg','/img/banner.jpg']);
+    addFallback('nav-avatar', ['./img/headshot.jpg','img/headshot.jpg','/headshot.jpg','/img/headshot.jpg']);
+  })();
+
+  (function(){
+    var links = document.querySelectorAll('.links a');
+    var sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    var observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          var id = '#' + entry.target.id;
+          links.forEach(a=>a.removeAttribute('aria-current'));
+          var active = document.querySelector('.links a[href="'+id+'"]');
+          if(active) active.setAttribute('aria-current','page');
+        }
+      });
+    }, { rootMargin:'-45% 0px -50% 0px', threshold:0.25 });
+    sections.forEach(s=>observer.observe(s));
+  })();
 </script>
 </body>
 </html>
