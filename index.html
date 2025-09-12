@@ -57,6 +57,15 @@
     li>ul{margin-top:.4rem}
 
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      /* Mobile tweaks to prevent header scrunching */
+    @media (max-width: 640px){
+      .nav{flex-wrap:wrap; align-items:flex-start; gap:.6rem}
+      .nav-left{flex:1 1 auto; gap:.5rem}
+      .avatar{width:64px;height:64px}
+      .brand{font-size:clamp(20px,7vw,24px)}
+      .links{order:2; flex:1 0 100%; display:flex; justify-content:space-between; gap:.6rem}
+      .links a{font-size:1rem}
+    }
   </style>
 </head>
 <body>
@@ -136,47 +145,42 @@
     <h2 id="projects-h">Some Recent Projects</h2>
     <ul>
       <!-- FundFire (FF) -->
-      <li><strong>FF</strong>
+      <li><strong>FundFire</strong>
         <ul>
           <li>
             <a href="https://www.fundfire.com/c/4951664/683374" target="_blank" rel="noopener noreferrer">BlackRock’s Diplomat-in-Chief: Inside Larry Fink’s Shadow Foreign Policy</a>
-            <p class="dek">A count of how frequently one of the most influential business leaders meets with presidents, prime ministers, and kings, and what it means for economic sovereignty.</p>
+            <p class="dek">A count of how frequently one of the most influential business leaders meets with presidents, prime ministers, and kings, and what it means for economic sovereignty</p>
           </li>
           <li>
             <a href="https://www.fundfire.com/c/4948874/682534" target="_blank" rel="noopener noreferrer">Alts Managers Face Skepticism from RIAs Over Private Credit ETFs</a>
-            <p class="dek">How the folks who sell securities are reacting to the folks who make securities attempting something new: making an illiquid asset for institutional investors liquid and for retail investors.</p>
+            <p class="dek">How the folks who sell securities are reacting to the folks who make securities attempting something new: making an illiquid asset for institutional investors liquid and for retail investors</p>
           </li>
           <li>
             <a href="https://www.fundfire.com/c/4928084/674694" target="_blank" rel="noopener noreferrer">Asset Managers Spent Millions Targeting Tax, Retirement Policies in Reconciliation Bill</a>
-            <p class="dek">A deep dive into the lobbying strategy of major industry groups around the 2025 reconciliation bill.</p>
+            <p class="dek">A deep dive into the lobbying strategy of major industry groups around the 2025 reconciliation bill</p>
           </li>
           <li>
             <a href="https://www.fundfire.com/c/4831964/655724" target="_blank" rel="noopener noreferrer">BlackRock Has Infrastructure Ambitions. Global Regulators Have Questions</a>
-            <p class="dek">Scrutinizing regulatory responses as the world’s largest asset manager expands into infrastructure.</p>
+            <p class="dek">Scrutinizing regulatory responses as the world’s largest asset manager expands into infrastructure</p>
           </li>
           <li>
             <a href="https://www.fundfire.com/c/4807864/652514" target="_blank" rel="noopener noreferrer">Private Equity Dominates Wealth M&A as Deal AUM Tops $1T</a>
-            <p class="dek">Tracking the surge of private‑equity backed acquisitions across wealth management.</p>
+            <p class="dek">Tracking the surge of private‑equity backed acquisitions across wealth management</p>
           </li>
           <li>
             <a href="https://www.fundfire.com/c/4717304/630154" target="_blank" rel="noopener noreferrer">Firms Hike Spending on CEOs' Private Jets, Personal Security</a>
-            <p class="dek">Comparing how much the largest asset managers spend on private flights and security for their chief executives, and updating their compensation.</p>
+            <p class="dek">Comparing how much the largest asset managers spend on private flights and security for their chief executives, and updating their compensation</p>
           </li>
           <li>
             <a href="https://www.fundfire.com/c/4595764/608054" target="_blank" rel="noopener noreferrer">Searches for BlackRock Skyrocketed After Trump-Shooter Ad Debacle</a>
-            <p class="dek">A visualization of how often people Googled the world’s largest asset manager and the PR response after it was tied up in the news cycle of Trump’s assassination attempt.</p>
+            <p class="dek">A visualization of how often people Googled the world’s largest asset manager and the PR response after it was tied up in the news cycle of Trump’s assassination attempt</p>
           </li>
           <li>
             <a href="https://www.fundfire.com/c/4356164/564814" target="_blank" rel="noopener noreferrer">Managers Go Mum on ESG as Political Pressure Mounts</a>
-            <p class="dek">Text analysis putting dates behind when conversation around ESG investing peaked — and when it went quiet.</p>
-          </li>
-          <li>
-            <a href="https://www.fundfire.com/c/4356094/564814" target="_blank" rel="noopener noreferrer">Firms Dangle Remote-Work Options to Lure Talent</a>
-            <p class="dek">How flexibility became a recruiting tool across asset management.</p>
-          </li>
-          <li>
+            <p class="dek">Text analysis putting dates behind when conversation around ESG investing peaked — and when it went quiet</p>
+          </li>          <li>
             <a href="https://www.fundfire.com/c/4798164/649164" target="_blank" rel="noopener noreferrer">Chilling Effect: See How Asset Managers Are Stripping Disclosures of DEI</a>
-            <p class="dek">A text analysis showing the decline of DEI language among publicly traded asset managers.</p>
+            <p class="dek">A text analysis showing the decline of DEI language among publicly traded asset managers</p>
           </li>
         </ul>
       </li>
@@ -186,28 +190,28 @@
         <ul>
           <li>
             <a href="https://www.financialadvisoriq.com/c/4794834/638654" target="_blank" rel="noopener noreferrer">Who Can Say They're an Advisor? Proposal Reignites Job Title Debate</a>
-            <p class="dek">A peek under the hood of how industry groups collaborate on their strategy to influence regulations.</p>
+            <p class="dek">A peek under the hood of how industry groups collaborate on their strategy to influence regulations</p>
           </li>
           <li>
             <a href="https://www.financialadvisoriq.com/c/4721614/631764" target="_blank" rel="noopener noreferrer">What's Driving the Boom in Structured Product Arbitrations</a>
-            <p class="dek">A story on a complex financial product and the growth in the number of investors suing the advisors who sold them.</p>
+            <p class="dek">A story on a complex financial product and the growth in the number of investors suing the advisors who sold them</p>
           </li>
           <li>
             <a href="https://www.financialadvisoriq.com/c/4702834/628164" target="_blank" rel="noopener noreferrer">Wealth Mgmt PACs Boosted Front-Runners to Lead House Financial Services</a>
-            <p class="dek">An overview of the candidates who were running to lead an influential congressional committee and their ties to the industry it oversees.</p>
+            <p class="dek">An overview of the candidates who were running to lead an influential congressional committee and their ties to the industry it oversees</p>
           </li>
           <li>
             <a href="https://www.financialadvisoriq.com/c/4686344/622614" target="_blank" rel="noopener noreferrer">New York’s Role in Securities Industry Continues Shrinking</a>
-            <p class="dek">New data showing the continuation of the financial industry’s spread outward from the nation’s financial center.</p>
+            <p class="dek">New data showing the continuation of the financial industry’s spread outward from the nation’s financial center</p>
           </li>
           <li>
             <a href="https://www.financialadvisoriq.com/c/4518654/588364" target="_blank" rel="noopener noreferrer">Financial Services Industry Spending on Lobbyists Like It's 2009</a>
-            <p class="dek">How much the wealth management industry spends on lobbyists — and why.</p>
+            <p class="dek">How much the wealth management industry spends on lobbyists — and why</p>
           </li>
 
           <!-- U5 Series -->
           <li><strong>U5 Series</strong>
-            <p class="dek">A three‑part series from public records requests filed across all fifty states seeking quasi‑public filings showing why securities brokers are terminated from their firms; Finalist for a 2025 Neal Award.</p>
+            <p class="dek">A three‑part series from public records requests filed across all fifty states seeking quasi‑public filings showing why securities brokers are terminated from their firms; Finalist for a 2025 Neal Award</p>
             <ul>
               <li><a href="https://www.financialadvisoriq.com/c/4366334/562454" target="_blank" rel="noopener noreferrer">Brokers Fired: Here’s Why Top Firms Give the Boot</a></li>
               <li><a href="https://www.financialadvisoriq.com/c/4284654/550954" target="_blank" rel="noopener noreferrer">Brokers Fired: What to Expect When You’re Expecting a U5 Filing</a></li>
@@ -222,23 +226,23 @@
         <ul>
           <li>
             <a href="https://www.ignites.com/c/3969654/512234" target="_blank" rel="noopener noreferrer">You Had Me at Low Cost: SEC Commissioners' Personal Assets</a>
-            <p class="dek">A visual depiction of the personal investments disclosed by the five people who regulate the investment industry on their ethics forms.</p>
+            <p class="dek">A visual depiction of the personal investments disclosed by the five people who regulate the investment industry on their ethics forms</p>
           </li>
           <li>
             <a href="https://www.wfae.org/politics/2021-01-15/revealing-money-and-power-networks-in-north-carolina-campaigns?utm_content=buffer6c3e7&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer" target="_blank" rel="noopener noreferrer">Revealing Money and Power Networks in North Carolina Campaigns</a>
-            <p class="dek">Mapping North Carolina’s campaign finance network in the 2020 General Assembly election, funded by a sunshine non‑profit.</p>
+            <p class="dek">Mapping North Carolina’s campaign finance network in the 2020 General Assembly election, funded by a sunshine non‑profit</p>
           </li>
           <li>
             <a href="https://www.ednc.org/author/michael-taffe/" target="_blank" rel="noopener noreferrer">EducationNC: Author Link</a>
-            <p class="dek">Author page from my time covering education policy and the community college system for a non‑profit newsroom.</p>
+            <p class="dek">Author page from my time covering education policy and the community college system for a non‑profit newsroom</p>
           </li>
           <li>
             <a href="https://www.dailytarheel.com/staff/michael_taffe" target="_blank" rel="noopener noreferrer">The Daily Tar Heel: Author Link</a>
-            <p class="dek">Author page from my time as data editor at my college paper.</p>
+            <p class="dek">Author page from my time as data editor at my college paper</p>
           </li>
           <li>
             <a href="https://indyweek.com/news/orange/chapel-hill-retirees-black-lives-matter/" target="_blank" rel="noopener noreferrer">Chapel Hill Retirees Stage Ongoing Black Lives Matter Demonstration</a>
-            <p class="dek">A group of locals in a majority‑white community engaged in a months‑long demonstration supporting the BLM movement. I brought a camping chair and asked them about it.</p>
+            <p class="dek">A group of locals in a majority‑white community engaged in a months‑long demonstration supporting the BLM movement. I brought a camping chair and asked them about it</p>
           </li>
         </ul>
       </li>
